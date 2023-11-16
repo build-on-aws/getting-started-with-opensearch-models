@@ -9,7 +9,6 @@ variable "domain_name" {
 
 variable "master_user_arn" {
   type = string
-  default = "arn:aws:iam::630693839113:user/riferrei"
 }
 
 data "aws_caller_identity" "current" {}
