@@ -2,8 +2,9 @@ version: '3'
 
 services:
   custom-ml-api:
-    build: '.'
+    build: './custom-ml-api'
     container_name: custom-ml-api
+    hostname: custom-ml-api
     ports:
       - '8888:5000'
     healthcheck:
