@@ -17,10 +17,14 @@ Before deploying the example, update the 4 values in `app.py`, specifying an exi
     "a_record_name": "api.mydomain.com"
 }
 ```
-Once updated, you can deploy the CDK application:
+Once updated, you can install the dependencies & deploy the CDK application:
 
 ```
 cd custom-ml-api/cdk
+pip install -r requirements.txt && cdk bootstrap
+```
+
+```
 cdk deploy
 ```
 
