@@ -1,9 +1,39 @@
 ## Getting Started with OpenSearch Remote Models
 
+This repository contains the supporting code for this series, focused on introducing the concept of [remote models](https://opensearch.org/docs/latest/ml-commons-plugin/extensibility/index) from [OpenSearch](https://opensearch.org). Remote models allow ML developers to create integrations with models trained outside OpenSearch. Once these models are registered, they can be used along with the built-in features of OpenSearch.
 
-## Deploying the sample ML API
+## AI21 Labs Jurassic 2 as Remote Model
 
-The example custom ML API is provisioned using the Cloud Development Kit (CDK). To install the CDK locally, follow the instructions in the [CDK documentation](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install).
+One way to explore the power of remote models with OpenSearch is registering a model that points to a known service such as Amazon Bedrock. This repository contains one example, where a model based on AI21 Labs Jurassic 2 is used to run inferences. To test this, follow this instructions:
+
+1. Start a local copy of OpenSearch
+
+```bash
+docker compose up -d
+```
+
+2. Deploy the remote model
+
+```bash
+python deploy-remote-model.py
+```
+
+Once the code finishes, you should see an output similar to this:
+
+```bash
+⏰ Waiting until the model is deployed...
+➡️ Testing the model with the question: What is the meaning of life?
+
+Response:
+
+The meaning of life is a question that has been debated throughout history, and there is no single answer that is universally accepted. Some people believe that the meaning of life is to seek happiness, fulfillment, and personal growth, while others believe that it is to serve a higher power or to fulfill a specific purpose. Ultimately, the meaning of life is a personal belief that may vary from person to person.
+```
+
+💡 Make sure to register AWS credentials that have access to Amazon Bedrock.
+
+## Deploying the Sample ML API
+
+The third part of this series focus on showing how ML developers can author their own APIs and use them as remote models. To illustrate how this is done, you can use the sample ML API implemented in this repository. This ML API is provisioned using the Cloud Development Kit (CDK). To install the CDK locally, follow the instructions in the [CDK documentation](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install).
 
 This will create an ECS Fargate service fronted by an Application Load Balancer. HTTPS will be configured on the application load balancer, so a custom Route53 domain and an ACM certificate will also be created.
 
@@ -55,5 +85,4 @@ See [CONTRIBUTING](CONTRIBUTING.md#security-issue-notifications) for more inform
 
 ## License
 
-This library is licensed under the MIT-0 License. See the LICENSE file.
-
+This library is licensed under the MIT-0 License. See the [LICENSE](LICENSE) file.
