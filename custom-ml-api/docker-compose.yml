@@ -2,7 +2,7 @@ version: '3'
 
 services:
   custom-ml-api:
-    build: './custom-ml-api'
+    build: '.'
     container_name: custom-ml-api
     hostname: custom-ml-api
     ports:
