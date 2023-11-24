@@ -79,10 +79,7 @@ if not ml_plugin_initialized:
 persistent_settings = {
     "persistent": {
         "plugins.ml_commons.only_run_on_ml_node": 'false',
-        "plugins.ml_commons.update_connector.enabled": 'true',
-        "plugins.ml_commons.trusted_connector_endpoints_regex": [
-            "^https://bedrock-runtime\\..*[a-z0-9-]\\.amazonaws\\.com/.*$"
-        ]
+        "plugins.ml_commons.update_connector.enabled": 'true'
     }
 }
 
