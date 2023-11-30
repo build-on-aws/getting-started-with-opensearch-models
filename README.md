@@ -1,10 +1,10 @@
-## Getting Started with OpenSearch External Models
+## Getting Started with OpenSearch Models
 
-This repository contains the supporting code for this series, focused on introducing the concept of [external models](https://opensearch.org/docs/latest/ml-commons-plugin/remote-models/index/) from [OpenSearch](https://opensearch.org). External models allow ML developers to create integrations with models trained outside OpenSearch. Once these models are registered, they can be used along with the built-in features of OpenSearch.
+This repository contains the supporting code for [this series](https://community.aws/posts/getting-started-with-opensearch-models/01-introduction-to-opensearch-models), focused on introducing the concept of [models](https://opensearch.org/docs/latest/ml-commons-plugin/integrating-ml-models/#choosing-a-model) from [OpenSearch](https://opensearch.org). Once created, models can be used along with the built-in features of OpenSearch.
 
 ## AI21 Labs Jurassic 2 as External Model
 
-One way to explore the power of external models with OpenSearch is registering a model that points to a known service such as Amazon Bedrock. This repository contains one example, where a model based on AI21 Labs Jurassic 2 is used to run inferences. To test this, follow this instructions:
+One way to explore the power of models with OpenSearch is registering a model that points to a known service such as Amazon Bedrock. This repository contains one example, where a model based on AI21 Labs Jurassic 2 is used to run inferences. To test this, follow this instructions:
 
 1. Start a local copy of OpenSearch
 
@@ -33,7 +33,7 @@ The meaning of life is a question that has been debated throughout history, and 
 
 ## Deploying the Sample ML API
 
-The third part of this series focus on showing how ML developers can author their own APIs and use them as external models. To illustrate how this is done, you can use the sample ML API implemented in this repository. This ML API is provisioned using the Cloud Development Kit (CDK). To install the CDK locally, follow the instructions in the [CDK documentation](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install).
+The third part of this series focus on showing how ML developers can author their own APIs and use them as models. To illustrate how this is done, you can use the sample ML API implemented in this repository. This ML API is provisioned using the Cloud Development Kit (CDK). To install the CDK locally, follow the instructions in the [CDK documentation](https://docs.aws.amazon.com/cdk/v2/guide/getting_started.html#getting_started_install).
 
 This will create an ECS Fargate service fronted by an Application Load Balancer. HTTPS will be configured on the application load balancer, so a custom Route53 domain and an ACM certificate will also be created.
 
