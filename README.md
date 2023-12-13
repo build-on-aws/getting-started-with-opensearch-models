@@ -1,6 +1,6 @@
 ## Getting Started with OpenSearch Models
 
-This repository contains the supporting code for [this series](https://community.aws/posts/getting-started-with-opensearch-models/01-introduction-to-opensearch-models), focused on introducing the concept of [models](https://opensearch.org/docs/latest/ml-commons-plugin/integrating-ml-models/#choosing-a-model) from [OpenSearch](https://opensearch.org). Once created, models can be used along with the built-in features of OpenSearch.
+This repository contains the supporting code for [this series](https://community.aws/content/2ZUiRDEKnIg0PiwPevVTaJ7B9qg/introduction-to-opensearch-models), focused on introducing the concept of [models](https://opensearch.org/docs/latest/ml-commons-plugin/integrating-ml-models/#choosing-a-model) from [OpenSearch](https://opensearch.org). Once created, models can be used along with the built-in features of OpenSearch.
 
 ## AI21 Labs Jurassic 2 as External Model
 
